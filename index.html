@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="We11 — премиальный детейлинг в Москве и Дубае. Оклейка, полировка, керамика, химчистка и полный уход за автомобилем." />
+  <title>We11 — Премиальный детейлинг</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="header__inner container">
+      <a href="index.html" class="logo">
+        <span class="logo__mark">We11</span>
+      </a>
+      <nav class="nav" aria-label="Основное меню">
+        <button type="button" class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Открыть меню">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__list" id="navMenu">
+          <li><a href="index.html" class="nav__link nav__link--active">Главная</a></li>
+          <li><a href="#portfolio" class="nav__link">Портфолио</a></li>
+          <li><a href="#about" class="nav__link">О студии</a></li>
+          <li class="nav__item nav__item--dropdown">
+            <a href="services.html" class="nav__link">Услуги</a>
+            <ul class="nav__submenu" aria-label="Направления We11">
+              <li><a href="okleyka.html" class="nav__sublink">Оклейка PPF</a></li>
+              <li><a href="polirovka.html" class="nav__sublink">Детейлинг-полировка</a></li>
+              <li><a href="keramika.html" class="nav__sublink">Керамические покрытия</a></li>
+              <li><a href="himchistka.html" class="nav__sublink">Химчистка салона</a></li>
+            </ul>
+          </li>
+          <li><a href="contacts.html" class="nav__link">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a href="tel:+74951234567" class="header__phone">+7 (495) 123-45-67</a>
+        <button type="button" class="btn btn--primary header__cta" id="openModalHeader">Записаться</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Главный экран">
+      <div class="hero__content container">
+        <p class="hero__label reveal">Детейлинг-центр мирового уровня</p>
+        <h1 class="hero__title reveal">WE11 — ПРЕМИАЛЬНЫЙ ДЕТЕЙЛИНГ</h1>
+        <p class="hero__subtitle reveal">
+          ЛКП, салон и защита премиум-класса: полировка, PPF, керамика, интерьер. Дисциплина процесса и материалы без компромисса.
+        </p>
+        <div class="hero__buttons reveal">
+          <button type="button" class="btn btn--hero-solid btn--lg" data-modal-open>Рассчитать стоимость</button>
+          <button type="button" class="btn btn--hero-ghost btn--lg" id="openModalHero">Быстрая запись</button>
+        </div>
+      </div>
+      <div class="hero__scroll" aria-hidden="true">
+        <span class="hero__scroll-line"></span>
+      </div>
+    </section>
+
+    <section class="features section" id="features">
+      <div class="container">
+        <div class="features__grid">
+          <article class="feature-card reveal">
+            <span class="feature-card__value">10+</span>
+            <span class="feature-card__unit">лет опыта</span>
+            <p class="feature-card__text">Команда мастеров с международной практикой и постоянным обучением.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-card__value">11&nbsp;000+</span>
+            <span class="feature-card__unit">авто</span>
+            <p class="feature-card__text">Довольных клиентов и безупречно выполненных проектов по России и ОАЭ.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-card__value">3</span>
+            <span class="feature-card__unit">филиала</span>
+            <p class="feature-card__text">Студии в Москве и Дубае с едиными стандартами сервиса и контроля качества.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-card__value">5</span>
+            <span class="feature-card__unit">лет гарантии</span>
+            <p class="feature-card__text">На ключевые виды работ при соблюдении регламента эксплуатации и ухода.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-preview section" id="services">
+      <div class="container">
+        <header class="section-head reveal">
+          <h2 class="section-head__title">Услуги</h2>
+          <p class="section-head__lead">
+            Полный спектр решений для сохранения идеального состояния кузова и интерьера — от бережной подготовки до многослойной защиты.
+          </p>
+        </header>
+        <div class="services-preview__grid">
+          <a href="okleyka.html" class="service-card service-card-link reveal">
+            <div class="service-card__icon" aria-hidden="true">01</div>
+            <h3 class="service-card__title">Оклейка защитной плёнкой</h3>
+            <p class="service-card__text">
+              PPF премиального класса: невидимая броня для ЛКП, оптики и деталей под высокой нагрузкой.
+            </p>
+            <span class="service-card__tag">Paint Protection Film</span>
+            <span class="service-card__more">Подробнее →</span>
+          </a>
+          <a href="polirovka.html" class="service-card service-card-link reveal">
+            <div class="service-card__icon" aria-hidden="true">02</div>
+            <h3 class="service-card__title">Абразивная полировка</h3>
+            <p class="service-card__text">
+              Выведение голограмм и дефектов с контролем толщины лака и зеркальным финишем.
+            </p>
+            <span class="service-card__tag">Correction &amp; Gloss</span>
+            <span class="service-card__more">Подробнее →</span>
+          </a>
+          <a href="keramika.html" class="service-card service-card-link reveal">
+            <div class="service-card__icon" aria-hidden="true">03</div>
+            <h3 class="service-card__title">Керамические покрытия</h3>
+            <p class="service-card__text">
+              Гидрофобность, глубина цвета и защита ЛКП — подбор системы под ваш стиль эксплуатации.
+            </p>
+            <span class="service-card__tag">Ceramic Coating</span>
+            <span class="service-card__more">Подробнее →</span>
+          </a>
+          <a href="himchistka.html" class="service-card service-card-link reveal">
+            <div class="service-card__icon" aria-hidden="true">04</div>
+            <h3 class="service-card__title">Химчистка и детейлинг салона</h3>
+            <p class="service-card__text">
+              Кожа, алькантара, карбон — деликатная очистка и уход без агрессивной химии.
+            </p>
+            <span class="service-card__tag">Interior Care</span>
+            <span class="service-card__more">Подробнее →</span>
+          </a>
+        </div>
+        <p class="services-preview__cta reveal">
+          <a href="services.html" class="btn btn--outline btn--lg">Все услуги и направления</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="container about__grid">
+        <div class="about__content reveal">
+          <h2 class="section-head__title section-head__title--left">О студии We11</h2>
+          <p>
+            Мы создали пространство, где технология встречается с эстетикой: стерильные боксы, профессиональный свет и инструмент, которым доверяют производители суперкаров.
+          </p>
+          <p>
+            Каждый этап — от диагностики ЛКП до финального осмотра — фиксируется и согласуется с вами. Никаких скрытых работ: только прозрачная смета, сроки и результат, который вы увидите ещё до сдачи автомобиля.
+          </p>
+          <ul class="about__list">
+            <li>Сертифицированные расходные материалы и плёнки</li>
+            <li>Климат-контроль и пылеулавливание в зонах подготовки</li>
+            <li>Персональный менеджер на весь цикл услуг</li>
+          </ul>
+        </div>
+        <div class="about__panel reveal" aria-hidden="true">
+          <blockquote class="about__quote">
+            «Автомобиль — отражение характера владельца. Наша задача — чтобы это отражение всегда оставалось безупречным.»
+          </blockquote>
+          <span class="about__signature">— команда We11</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio section" id="portfolio">
+      <div class="container">
+        <header class="section-head section-head--center reveal">
+          <h2 class="section-head__title">Результаты нашей работы</h2>
+          <p class="section-head__lead">
+            Более 11&nbsp;000 автомобилей прошли через наши руки. Каждый проект для нас — это искусство.
+          </p>
+        </header>
+        <div class="portfolio__grid">
+          <article class="portfolio-card portfolio-card--compare reveal">
+            <div class="compare" data-compare>
+              <div class="compare__track" data-compare-track>
+                <img
+                  class="compare__img compare__img--after"
+                  src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                  alt="Porsche 911 Turbo S — после детейлинга"
+                  loading="lazy"
+                  width="900"
+                  height="563"
+                />
+                <div class="compare__clip" data-compare-clip>
+                  <img
+                    class="compare__img compare__img--before"
+                    data-compare-before-img
+                    src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                    alt="Porsche 911 Turbo S — до детейлинга"
+                    loading="lazy"
+                    width="900"
+                    height="563"
+                  />
+                </div>
+                <button
+                  type="button"
+                  class="compare__handle"
+                  data-compare-handle
+                  aria-label="Ползунок сравнения: до и после"
+                  aria-valuemin="5"
+                  aria-valuemax="95"
+                  aria-valuenow="50"
+                ></button>
+              </div>
+              <div class="compare__tags" aria-hidden="true">
+                <span class="compare__tag">До</span>
+                <span class="compare__tag compare__tag--accent">После</span>
+              </div>
+            </div>
+            <div class="portfolio-card__caption">
+              <h3 class="portfolio-card__title">Porsche 911 Turbo S</h3>
+              <p class="portfolio-card__service">Комплексная оклейка и керамика</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal">
+            <div class="portfolio-card__split">
+              <figure class="portfolio-card__half">
+                <span class="portfolio-card__badge">До</span>
+                <img
+                  src="https://images.unsplash.com/photo-1542282088-fe8426683b8f?auto=format&amp;fit=crop&amp;w=600&amp;q=80"
+                  alt="Mercedes-AMG GT — до работ"
+                  loading="lazy"
+                  width="600"
+                  height="375"
+                />
+              </figure>
+              <figure class="portfolio-card__half">
+                <span class="portfolio-card__badge portfolio-card__badge--after">После</span>
+                <img
+                  src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&amp;fit=crop&amp;w=600&amp;q=80"
+                  alt="Mercedes-AMG GT — после работ"
+                  loading="lazy"
+                  width="600"
+                  height="375"
+                />
+              </figure>
+            </div>
+            <div class="portfolio-card__caption">
+              <h3 class="portfolio-card__title">Mercedes-AMG GT</h3>
+              <p class="portfolio-card__service">Двухэтапная полировка и защита ЛКП</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal">
+            <div class="portfolio-card__split">
+              <figure class="portfolio-card__half">
+                <span class="portfolio-card__badge">До</span>
+                <img
+                  src="https://images.unsplash.com/photo-1555215692-1964eb758ccc?auto=format&amp;fit=crop&amp;w=600&amp;q=80"
+                  alt="BMW M4 — до работ"
+                  loading="lazy"
+                  width="600"
+                  height="375"
+                />
+              </figure>
+              <figure class="portfolio-card__half">
+                <span class="portfolio-card__badge portfolio-card__badge--after">После</span>
+                <img
+                  src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&amp;fit=crop&amp;w=600&amp;q=80"
+                  alt="BMW M4 — после работ"
+                  loading="lazy"
+                  width="600"
+                  height="375"
+                />
+              </figure>
+            </div>
+            <div class="portfolio-card__caption">
+              <h3 class="portfolio-card__title">BMW M4 Competition</h3>
+              <p class="portfolio-card__service">Химчистка салона и керамика на кузов</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews section" id="reviews">
+      <div class="container">
+        <header class="section-head reveal">
+          <h2 class="section-head__title">Отзывы</h2>
+          <p class="section-head__lead">Слово тем, кто уже доверил нам свой автомобиль.</p>
+        </header>
+        <div class="reviews__grid">
+          <blockquote class="review-card reveal">
+            <p>«Оклейка и керамика на GT — блеск как с завода, через полгода так же. Ребята объяснили каждый этап, без давления на допы.»</p>
+            <footer>— Александр Р., предприниматель</footer>
+          </blockquote>
+          <blockquote class="review-card reveal">
+            <p>«Полировка сняла всё, что накопил за зиму на серебристом кузове. Салон после химчистки — как новый, запах нейтральный.»</p>
+            <footer>— Марина К., дизайнер</footer>
+          </blockquote>
+          <blockquote class="review-card reveal">
+            <p>«Вёз машину из Дубая: согласовали по видео, сроки выдержали. Уровень студии ощущается с порога — рекомендую коллегам.»</p>
+            <footer>— Дмитрий В., инвестор</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand reveal">
+        <a href="index.html"><span class="logo__mark logo__mark--footer">We11</span></a>
+        <p>Премиальный детейлинг. Москва · Дубай</p>
+      </div>
+      <div class="footer__col reveal">
+        <h3 class="footer__title">Москва</h3>
+        <p>ул. Примерная, 1, студия We11</p>
+        <a href="tel:+74951234567" class="footer__link">+7 (495) 123-45-67</a>
+        <a href="mailto:msk@we11.detail" class="footer__link">msk@we11.detail</a>
+      </div>
+      <div class="footer__col reveal">
+        <h3 class="footer__title">Дубай</h3>
+        <p>Dubai Design District, We11 Garage</p>
+        <a href="tel:+97141234567" class="footer__link">+971 4 123 4567</a>
+        <a href="mailto:dubai@we11.detail" class="footer__link">dubai@we11.detail</a>
+      </div>
+      <div class="footer__social reveal">
+        <h3 class="footer__title">Соцсети</h3>
+        <div class="footer__social-links">
+          <a href="https://t.me/" class="footer__link" target="_blank" rel="noopener noreferrer">Telegram</a>
+          <a href="https://instagram.com/" class="footer__link" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://vk.com/" class="footer__link" target="_blank" rel="noopener noreferrer">VK</a>
+        </div>
+        <p style="margin-top: 1rem;"><a href="contacts.html" class="footer__link">Схема проезда</a></p>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <p class="footer__legal">
+        <span>© We11, 2026. Все права защищены.</span>
+        <a href="privacy.html" class="footer__legal-link">Политика конфиденциальности</a>
+      </p>
+    </div>
+  </footer>
+
+  <div class="modal" id="modalBook" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal__backdrop" id="modalBackdrop" tabindex="-1"></div>
+    <div class="modal__box">
+      <button type="button" class="modal__close" id="modalClose" aria-label="Закрыть окно">&times;</button>
+      <h2 class="modal__title" id="modalTitle">Запись в We11</h2>
+      <p class="modal__text">
+        Оставьте контакты — менеджер свяжется с вами в течение часа, уточнит модель и пожелания.
+      </p>
+      <form class="modal__form" id="modalForm">
+        <div class="modal__form-fields" id="modalFormFields">
+          <label class="modal__label">
+            <span>Имя</span>
+            <input type="text" name="name" required autocomplete="name" class="modal__input" placeholder="Как к вам обращаться" />
+          </label>
+          <label class="modal__label">
+            <span>Телефон</span>
+            <input type="tel" name="phone" required autocomplete="tel" class="modal__input modal__input--phone" id="modalPhone" inputmode="tel" maxlength="18" placeholder="+7 (__) ___-__-__" />
+          </label>
+          <label class="modal__label">
+            <span>Комментарий</span>
+            <textarea name="comment" class="modal__input modal__textarea" rows="4" placeholder="Марка авто, модель, интересующая услуга"></textarea>
+          </label>
+          <button type="submit" class="modal__submit">ОТПРАВИТЬ ЗАЯВКУ</button>
+        </div>
+        <p class="modal__hint" id="modalHint" hidden>Спасибо, мы скоро свяжемся с вами!</p>
+      </form>
+    </div>
+  </div>
+
+  <div class="cookie-consent" id="cookieConsent" role="dialog" aria-label="Уведомление об использовании cookie" aria-live="polite" hidden>
+    <div class="cookie-consent__inner container">
+      <p class="cookie-consent__text">
+        Мы используем файлы cookie, чтобы сделать ваш опыт работы с сайтом лучше. Продолжая просмотр, вы соглашаетесь с нашей
+        <a href="privacy.html">Политикой конфиденциальности</a>.
+      </p>
+      <button type="button" class="cookie-consent__btn" id="cookieConsentAccept">Принять</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

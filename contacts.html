@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Контакты We11: студии премиального детейлинга в Москве и Дубае — адрес, телефон, карта проезда." />
+  <title>Контакты — We11</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="header__inner container">
+      <a href="index.html" class="logo">
+        <span class="logo__mark">We11</span>
+      </a>
+      <nav class="nav" aria-label="Основное меню">
+        <button type="button" class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Открыть меню">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__list" id="navMenu">
+          <li><a href="index.html" class="nav__link">Главная</a></li>
+          <li><a href="index.html#portfolio" class="nav__link">Портфолио</a></li>
+          <li><a href="index.html#about" class="nav__link">О студии</a></li>
+          <li class="nav__item nav__item--dropdown">
+            <a href="services.html" class="nav__link">Услуги</a>
+            <ul class="nav__submenu" aria-label="Направления We11">
+              <li><a href="okleyka.html" class="nav__sublink">Оклейка PPF</a></li>
+              <li><a href="polirovka.html" class="nav__sublink">Детейлинг-полировка</a></li>
+              <li><a href="keramika.html" class="nav__sublink">Керамические покрытия</a></li>
+              <li><a href="himchistka.html" class="nav__sublink">Химчистка салона</a></li>
+            </ul>
+          </li>
+          <li><a href="contacts.html" class="nav__link nav__link--active">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a href="tel:+74951234567" class="header__phone">+7 (495) 123-45-67</a>
+        <button type="button" class="btn btn--primary header__cta" id="openModalHeader">Записаться</button>
+      </div>
+    </div>
+  </header>
+
+  <!--
+    Структура страницы контактов:
+    1. page-hero — хлебные крошки, заголовок, короткий лид
+    2. contacts-section — сетка из двух location-card (Москва | Дубай)
+       • location-card__body — метка города, адрес, телефон, email, часы
+       • location-card__map-wrap — полноцветная интерактивная карта (Google Maps iframe)
+    3. Общий footer + модальное окно записи (как на остальных страницах)
+  -->
+
+  <main>
+    <header class="page-hero">
+      <div class="container">
+        <p class="page-hero__crumb reveal"><a href="index.html">Главная</a> / Контакты</p>
+        <h1 class="page-hero__title reveal">Контакты</h1>
+        <p class="page-hero__lead reveal">
+          Два флагманских пространства We11 — в Москве и в Дубае. Единый стандарт сервиса, персональные менеджеры и приватная зона приёмки для клиентов, ценящих время и конфиденциальность.
+        </p>
+      </div>
+    </header>
+
+    <section class="contacts-section" aria-label="Адреса филиалов">
+      <div class="container contacts-grid">
+        <article class="location-card reveal">
+          <div class="location-card__body">
+            <p class="location-card__label">Филиал</p>
+            <h2 class="location-card__title">Москва</h2>
+            <p class="location-card__address">
+              125047, Москва, ул. Примерная, 1<br />
+              Студия We11 · въезд с обратной стороны здания (шлагбаум по звонку)
+            </p>
+            <div class="location-card__meta">
+              <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+              <a href="mailto:msk@we11.detail">msk@we11.detail</a>
+            </div>
+            <p class="location-card__hours">
+              Пн–Сб: 10:00 — 21:00<br />
+              Вс: по записи
+            </p>
+          </div>
+          <div class="location-card__map-wrap">
+            <iframe
+              class="location-card__map"
+              title="Google Maps — центр Москвы, ориентир для студии We11 (замените на точный embed из кабинета Google Мои карты)"
+              src="https://www.google.com/maps?q=55.7522,37.6156&amp;z=15&amp;hl=ru&amp;output=embed"
+              loading="lazy"
+              allowfullscreen=""
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </article>
+
+        <article class="location-card reveal">
+          <div class="location-card__body">
+            <p class="location-card__label">Филиал</p>
+            <h2 class="location-card__title">Дубай</h2>
+            <p class="location-card__address">
+              Dubai Design District (d3)<br />
+              We11 Garage — боксы с климат-контролем и зоной ожидания
+            </p>
+            <div class="location-card__meta">
+              <a href="tel:+97141234567">+971 4 123 4567</a>
+              <a href="mailto:dubai@we11.detail">dubai@we11.detail</a>
+            </div>
+            <p class="location-card__hours">
+              Пн–Сб: 9:00 — 20:00 (GST)<br />
+              Воскресенье: по согласованию
+            </p>
+          </div>
+          <div class="location-card__map-wrap">
+            <iframe
+              class="location-card__map"
+              title="Google Maps — Dubai Design District, ориентир для We11 Garage"
+              src="https://www.google.com/maps?q=25.1972,55.2780&amp;z=14&amp;hl=en&amp;output=embed"
+              loading="lazy"
+              allowfullscreen=""
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand reveal">
+        <a href="index.html"><span class="logo__mark logo__mark--footer">We11</span></a>
+        <p>Премиальный детейлинг. Москва · Дубай</p>
+      </div>
+      <div class="footer__col reveal">
+        <h3 class="footer__title">Москва</h3>
+        <p>ул. Примерная, 1, студия We11</p>
+        <a href="tel:+74951234567" class="footer__link">+7 (495) 123-45-67</a>
+        <a href="mailto:msk@we11.detail" class="footer__link">msk@we11.detail</a>
+      </div>
+      <div class="footer__col reveal">
+        <h3 class="footer__title">Дубай</h3>
+        <p>Dubai Design District, We11 Garage</p>
+        <a href="tel:+97141234567" class="footer__link">+971 4 123 4567</a>
+        <a href="mailto:dubai@we11.detail" class="footer__link">dubai@we11.detail</a>
+      </div>
+      <div class="footer__social reveal">
+        <h3 class="footer__title">Соцсети</h3>
+        <div class="footer__social-links">
+          <a href="https://t.me/" class="footer__link" target="_blank" rel="noopener noreferrer">Telegram</a>
+          <a href="https://instagram.com/" class="footer__link" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://vk.com/" class="footer__link" target="_blank" rel="noopener noreferrer">VK</a>
+        </div>
+        <p style="margin-top: 1rem;"><a href="contacts.html" class="footer__link">Схема проезда</a></p>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <p class="footer__legal">
+        <span>© We11, 2026. Все права защищены.</span>
+        <a href="privacy.html" class="footer__legal-link">Политика конфиденциальности</a>
+      </p>
+    </div>
+  </footer>
+
+  <div class="modal" id="modalBook" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal__backdrop" id="modalBackdrop" tabindex="-1"></div>
+    <div class="modal__box">
+      <button type="button" class="modal__close" id="modalClose" aria-label="Закрыть окно">&times;</button>
+      <h2 class="modal__title" id="modalTitle">Запись в We11</h2>
+      <p class="modal__text">
+        Оставьте контакты — менеджер свяжется с вами в течение часа, уточнит модель и пожелания.
+      </p>
+      <form class="modal__form" id="modalForm">
+        <div class="modal__form-fields" id="modalFormFields">
+          <label class="modal__label">
+            <span>Имя</span>
+            <input type="text" name="name" required autocomplete="name" class="modal__input" placeholder="Как к вам обращаться" />
+          </label>
+          <label class="modal__label">
+            <span>Телефон</span>
+            <input type="tel" name="phone" required autocomplete="tel" class="modal__input modal__input--phone" id="modalPhone" inputmode="tel" maxlength="18" placeholder="+7 (__) ___-__-__" />
+          </label>
+          <label class="modal__label">
+            <span>Комментарий</span>
+            <textarea name="comment" class="modal__input modal__textarea" rows="4" placeholder="Марка авто, модель, интересующая услуга"></textarea>
+          </label>
+          <button type="submit" class="modal__submit">ОТПРАВИТЬ ЗАЯВКУ</button>
+        </div>
+        <p class="modal__hint" id="modalHint" hidden>Спасибо, мы скоро свяжемся с вами!</p>
+      </form>
+    </div>
+  </div>
+
+  <div class="cookie-consent" id="cookieConsent" role="dialog" aria-label="Уведомление об использовании cookie" aria-live="polite" hidden>
+    <div class="cookie-consent__inner container">
+      <p class="cookie-consent__text">
+        Мы используем файлы cookie, чтобы сделать ваш опыт работы с сайтом лучше. Продолжая просмотр, вы соглашаетесь с нашей
+        <a href="privacy.html">Политикой конфиденциальности</a>.
+      </p>
+      <button type="button" class="cookie-consent__btn" id="cookieConsentAccept">Принять</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

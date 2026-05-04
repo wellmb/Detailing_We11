@@ -1,0 +1,651 @@
+/* Внутренние страницы: контакты, каталог услуг, внутренний контент услуг */
+
+.page-hero {
+  position: relative;
+  padding: calc(var(--header-h) + 4rem) 0 3.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: linear-gradient(180deg, #0c0c0e 0%, var(--bg-deep) 100%);
+}
+
+.page-hero__crumb {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--silver-dim);
+  margin: 0 0 1rem;
+}
+
+.page-hero__crumb a {
+  color: var(--silver);
+  transition: color var(--transition);
+}
+
+.page-hero__crumb a:hover {
+  color: var(--accent);
+}
+
+.page-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.85rem, 4vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  margin: 0 0 0.75rem;
+  color: var(--accent);
+}
+
+.page-hero__lead {
+  margin: 0;
+  max-width: 560px;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+.services-catalog {
+  padding-bottom: clamp(4rem, 10vw, 6rem);
+}
+
+.services-catalog__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+}
+
+.service-card-link {
+  display: block;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.service-card-link:focus-visible {
+  outline: 2px solid var(--silver);
+  outline-offset: 3px;
+}
+
+.contacts-section {
+  padding: clamp(3rem, 8vw, 5rem) 0 clamp(4rem, 10vw, 6rem);
+}
+
+.contacts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.location-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--bg-elevated);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.location-card:hover {
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.5);
+}
+
+.location-card__body {
+  padding: 2.5rem 2.5rem 1.75rem;
+  flex: 0 0 auto;
+}
+
+.location-card__label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--silver-dim);
+  margin: 0 0 0.5rem;
+}
+
+.location-card__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin: 0 0 1rem;
+  color: var(--accent);
+}
+
+.location-card__address {
+  margin: 0 0 1.25rem;
+  color: var(--silver);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.location-card__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.location-card__meta a {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  transition: color var(--transition);
+}
+
+.location-card__meta a:hover {
+  color: var(--accent);
+}
+
+.location-card__hours {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.85rem;
+  color: var(--silver-dim);
+  line-height: 1.55;
+}
+
+.location-card__map-wrap {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 280px;
+  background: #0a0a0a;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.location-card__map {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border: 0;
+  /* полноцветная карта, слегка приглушённая под тёмную карточку */
+  filter: brightness(0.92) saturate(1.06);
+  transform: translateZ(0);
+}
+
+@media (max-width: 1024px) {
+  .contacts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .location-card__map-wrap {
+    min-height: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-catalog__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/**
+ * Страницы услуг — внутренний контент (hero, секции, этапы, цены, CTA)
+ */
+
+.page-service main {
+  padding-top: var(--header-h);
+}
+
+/* ——— Hero услуги ——— */
+.service-hero {
+  position: relative;
+  padding: calc(var(--header-h) + 3rem) 0 4rem;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: linear-gradient(165deg, #0e0e12 0%, var(--bg-deep) 45%, #08080a 100%);
+}
+
+.service-hero::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  right: -15%;
+  width: min(520px, 70vw);
+  height: min(520px, 70vw);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.service-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.service-hero__crumb {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--silver-dim);
+  margin: 0 0 1rem;
+}
+
+.service-hero__crumb a {
+  color: var(--silver);
+  transition: color var(--transition);
+}
+
+.service-hero__crumb a:hover {
+  color: var(--accent);
+}
+
+.service-hero__label {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--silver-dim);
+  margin-bottom: 0.85rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-glass);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.service-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.85rem, 4.5vw, 2.85rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+  margin: 0 0 1rem;
+  color: var(--accent);
+  max-width: 900px;
+}
+
+.service-hero__lead {
+  margin: 0;
+  max-width: 720px;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  line-height: 1.65;
+  color: var(--silver);
+}
+
+.service-hero__price-tag {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 1.75rem;
+  padding: 0.65rem 1.25rem;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.service-hero__price-tag span {
+  color: var(--silver);
+  font-weight: 500;
+  margin-right: 0.5rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+/* ——— Секции контента ——— */
+.service-section {
+  padding: clamp(3rem, 8vw, 5rem) 0;
+}
+
+.service-section--muted {
+  background: linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.02) 50%, transparent 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.service-section__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+  font-weight: 600;
+  margin: 0 0 1.25rem;
+  color: var(--accent);
+}
+
+.service-prose {
+  max-width: 760px;
+}
+
+.service-prose p {
+  margin: 0 0 1rem;
+  color: var(--text-muted);
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.service-prose p:last-child {
+  margin-bottom: 0;
+}
+
+/* Доп. блоки (опционально): карточки преимуществ */
+.service-why__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.service-why__item {
+  padding: 1.5rem 1.35rem;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  transition: border-color var(--transition), background var(--transition);
+}
+
+.service-why__item:hover {
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.service-why__item h3 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  color: var(--accent);
+}
+
+.service-why__item p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Этапы — кастомная нумерация (поддержка 5–6+ шагов) */
+.service-steps__head {
+  margin-bottom: 2rem;
+}
+
+.service-steps__intro {
+  margin: 0;
+  max-width: 640px;
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.service-steps-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.25rem;
+  counter-reset: service-step;
+}
+
+@media (min-width: 768px) {
+  .service-steps-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.service-steps-list > li {
+  counter-increment: service-step;
+  position: relative;
+  margin: 0;
+  padding: 1.5rem 1.5rem 1.5rem 4.25rem;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--bg-elevated);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.service-steps-list > li:hover {
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+.service-steps-list > li::before {
+  content: counter(service-step, decimal-leading-zero);
+  position: absolute;
+  left: 1.25rem;
+  top: 1.35rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--bg-deep);
+  background: linear-gradient(145deg, #ffffff 0%, #c8cdd4 100%);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.12);
+}
+
+.service-steps-list h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 0.4rem;
+  color: var(--accent);
+}
+
+.service-steps-list p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Таблица цен */
+.service-price__wrap {
+  overflow-x: auto;
+  margin-top: 0.5rem;
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.price-table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.price-table caption {
+  caption-side: bottom;
+  padding: 1rem 1.25rem 0;
+  font-size: 0.8rem;
+  color: var(--silver-dim);
+  text-align: left;
+  line-height: 1.5;
+}
+
+.price-table thead th {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 600;
+  color: var(--silver);
+  text-align: left;
+  padding: 1.1rem 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.price-table tbody td {
+  padding: 1rem 1.25rem;
+  color: var(--text-muted);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  vertical-align: top;
+  line-height: 1.5;
+}
+
+.price-table tbody td:first-child {
+  color: var(--silver);
+  font-weight: 500;
+}
+
+.price-table tbody td:last-child {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.price-table tbody tr {
+  transition: background var(--transition);
+}
+
+.price-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.price-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* CTA */
+.service-cta {
+  padding: clamp(3rem, 8vw, 4.5rem) 0 clamp(4rem, 10vw, 6rem);
+}
+
+.service-cta__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.75rem;
+  padding: 2.5rem 2.25rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-glass);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+}
+
+.service-cta__text h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.5vw, 1.65rem);
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  color: var(--accent);
+}
+
+.service-cta__text p {
+  margin: 0;
+  max-width: 480px;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.service-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+@media (max-width: 640px) {
+  .service-hero {
+    padding-top: calc(var(--header-h) + 2rem);
+    padding-bottom: 2.75rem;
+  }
+
+  .service-hero__title {
+    font-size: 1.65rem;
+  }
+
+  .service-prose p {
+    font-size: 0.98rem;
+  }
+
+  .service-steps-list > li {
+    padding-left: 3.85rem;
+  }
+
+  .price-table {
+    min-width: 100%;
+    font-size: 0.88rem;
+  }
+
+  .price-table thead th,
+  .price-table tbody td {
+    padding: 0.85rem 1rem;
+  }
+
+  .service-cta__inner {
+    padding: 1.75rem 1.35rem;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .service-cta__text p {
+    max-width: none;
+  }
+
+  .service-cta__actions {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .service-cta__actions .btn {
+    width: 100%;
+  }
+}
+
+/* Типовые юридические тексты (privacy.html) */
+.legal-prose {
+  max-width: 720px;
+}
+
+.legal-prose h2 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 2rem 0 0.65rem;
+  color: var(--accent);
+}
+
+.legal-prose h2:first-of-type {
+  margin-top: 0;
+}
+
+.legal-prose p,
+.legal-prose li {
+  margin: 0 0 0.85rem;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+.legal-prose ul {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.legal-prose li {
+  margin-bottom: 0.4rem;
+}
+
+.legal-prose a {
+  color: var(--silver);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.legal-prose a:hover {
+  color: var(--accent);
+}
+
