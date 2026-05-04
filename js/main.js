@@ -197,14 +197,14 @@
     });
   }
 
-  function initCompare(root) {
-    var track = root.querySelector("[data-compare-track]");
-    var clip = root.querySelector("[data-compare-clip]");
-    var handle = root.querySelector("[data-compare-handle]");
+  function initBaSlider(root) {
+    var track = root.querySelector("[data-ba-track]");
+    var clip = root.querySelector("[data-ba-clip]");
+    var handle = root.querySelector("[data-ba-handle]");
     if (!track || !clip || !handle) return;
 
     function syncTrackWidth() {
-      track.style.setProperty("--compare-track-w", track.offsetWidth + "px");
+      track.style.setProperty("--ba-track-w", track.offsetWidth + "px");
     }
 
     function posFromClient(clientX) {
@@ -214,7 +214,9 @@
     }
 
     function setPos(percent) {
-      var p = Math.min(95, Math.max(5, percent));
+      var min = parseFloat(handle.getAttribute("aria-valuemin") || "3", 10);
+      var max = parseFloat(handle.getAttribute("aria-valuemax") || "97", 10);
+      var p = Math.min(max, Math.max(min, percent));
       clip.style.width = p + "%";
       handle.style.left = p + "%";
       handle.setAttribute("aria-valuenow", String(Math.round(p)));
@@ -297,7 +299,7 @@
     setPos(50);
   }
 
-  document.querySelectorAll("[data-compare]").forEach(initCompare);
+  document.querySelectorAll("[data-ba-slider]").forEach(initBaSlider);
 
   var cookieBanner = document.getElementById("cookieConsent");
   var cookieAccept = document.getElementById("cookieConsentAccept");

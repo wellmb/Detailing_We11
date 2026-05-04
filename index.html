@@ -173,107 +173,46 @@
             Более 11&nbsp;000 автомобилей прошли через наши руки. Каждый проект для нас — это искусство.
           </p>
         </header>
-        <div class="portfolio__grid">
-          <article class="portfolio-card portfolio-card--compare reveal">
-            <div class="compare" data-compare>
-              <div class="compare__track" data-compare-track>
+        <div class="portfolio-showcase reveal">
+          <div class="ba-slider" data-ba-slider>
+            <div class="ba-slider__frame">
+              <div class="ba-slider__track" data-ba-track>
                 <img
-                  class="compare__img compare__img--after"
-                  src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
-                  alt="Porsche 911 Turbo S — после детейлинга"
-                  loading="lazy"
-                  width="900"
-                  height="563"
+                  class="ba-slider__img ba-slider__img--after"
+                  src="Toyota Scion FR-S posle.jpg"
+                  alt="Toyota Scion FR-S — после комплексного восстановления"
+                  width="1600"
+                  height="900"
+                  decoding="async"
                 />
-                <div class="compare__clip" data-compare-clip>
+                <div class="ba-slider__clip" data-ba-clip>
                   <img
-                    class="compare__img compare__img--before"
-                    data-compare-before-img
-                    src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
-                    alt="Porsche 911 Turbo S — до детейлинга"
-                    loading="lazy"
-                    width="900"
-                    height="563"
+                    class="ba-slider__img ba-slider__img--before"
+                    src="Toyota Scion FR-S do.png"
+                    alt="Toyota Scion FR-S — до восстановления"
+                    width="1600"
+                    height="900"
+                    decoding="async"
                   />
                 </div>
+                <span class="ba-slider__label ba-slider__label--before">ДО</span>
+                <span class="ba-slider__label ba-slider__label--after">ПОСЛЕ</span>
                 <button
                   type="button"
-                  class="compare__handle"
-                  data-compare-handle
-                  aria-label="Ползунок сравнения: до и после"
-                  aria-valuemin="5"
-                  aria-valuemax="95"
+                  class="ba-slider__handle"
+                  data-ba-handle
+                  aria-label="Ползунок сравнения: потяните влево или вправо"
+                  aria-valuemin="3"
+                  aria-valuemax="97"
                   aria-valuenow="50"
                 ></button>
               </div>
-              <div class="compare__tags" aria-hidden="true">
-                <span class="compare__tag">До</span>
-                <span class="compare__tag compare__tag--accent">После</span>
-              </div>
             </div>
-            <div class="portfolio-card__caption">
-              <h3 class="portfolio-card__title">Porsche 911 Turbo S</h3>
-              <p class="portfolio-card__service">Комплексная оклейка и керамика</p>
+            <div class="ba-slider__meta">
+              <h3 class="ba-slider__title">Toyota Scion FR-S</h3>
+              <p class="ba-slider__service">Комплексное восстановление экстерьера и защита ЛКП</p>
             </div>
-          </article>
-
-          <article class="portfolio-card reveal">
-            <div class="portfolio-card__split">
-              <figure class="portfolio-card__half">
-                <span class="portfolio-card__badge">До</span>
-                <img
-                  src="https://images.unsplash.com/photo-1542282088-fe8426683b8f?auto=format&amp;fit=crop&amp;w=600&amp;q=80"
-                  alt="Mercedes-AMG GT — до работ"
-                  loading="lazy"
-                  width="600"
-                  height="375"
-                />
-              </figure>
-              <figure class="portfolio-card__half">
-                <span class="portfolio-card__badge portfolio-card__badge--after">После</span>
-                <img
-                  src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&amp;fit=crop&amp;w=600&amp;q=80"
-                  alt="Mercedes-AMG GT — после работ"
-                  loading="lazy"
-                  width="600"
-                  height="375"
-                />
-              </figure>
-            </div>
-            <div class="portfolio-card__caption">
-              <h3 class="portfolio-card__title">Mercedes-AMG GT</h3>
-              <p class="portfolio-card__service">Двухэтапная полировка и защита ЛКП</p>
-            </div>
-          </article>
-
-          <article class="portfolio-card reveal">
-            <div class="portfolio-card__split">
-              <figure class="portfolio-card__half">
-                <span class="portfolio-card__badge">До</span>
-                <img
-                  src="https://images.unsplash.com/photo-1555215692-1964eb758ccc?auto=format&amp;fit=crop&amp;w=600&amp;q=80"
-                  alt="BMW M4 — до работ"
-                  loading="lazy"
-                  width="600"
-                  height="375"
-                />
-              </figure>
-              <figure class="portfolio-card__half">
-                <span class="portfolio-card__badge portfolio-card__badge--after">После</span>
-                <img
-                  src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&amp;fit=crop&amp;w=600&amp;q=80"
-                  alt="BMW M4 — после работ"
-                  loading="lazy"
-                  width="600"
-                  height="375"
-                />
-              </figure>
-            </div>
-            <div class="portfolio-card__caption">
-              <h3 class="portfolio-card__title">BMW M4 Competition</h3>
-              <p class="portfolio-card__service">Химчистка салона и керамика на кузов</p>
-            </div>
-          </article>
+          </div>
         </div>
       </div>
     </section>
