@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Контакты We11: студии премиального детейлинга в Москве и Дубае — адрес, телефон, карта проезда." />
-  <title>Контакты — We11</title>
+  <meta name="description" content="Apex Detail contacts: premium detailing studios in Los Angeles and Miami — address, phone, email, hours, and directions." />
+  <title>Contacts — Apex Detail</title>
   <link rel="icon" type="image/png" sizes="512x512" href="images/we11-car-icon-white-on-black-512.png" />
   <link rel="apple-touch-icon" href="images/we11-car-icon-white-on-black-512.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,81 +17,79 @@
   <header class="header" id="header">
     <div class="header__inner container">
       <a href="index.html" class="logo">
-        <span class="logo__mark">We11</span>
+        <span class="logo__mark">Apex Detail</span>
       </a>
-      <nav class="nav" aria-label="Основное меню">
-        <button type="button" class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Открыть меню">
+      <nav class="nav" aria-label="Main menu">
+        <button type="button" class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
           <span></span><span></span><span></span>
         </button>
-        <div class="nav__drawer" id="navMenu" role="dialog" aria-modal="true" aria-label="Меню сайта" aria-hidden="true">
-          <button type="button" class="nav__close" id="navClose" aria-label="Закрыть меню">&times;</button>
+        <div class="nav__drawer" id="navMenu" role="dialog" aria-modal="true" aria-label="Site menu" aria-hidden="true">
+          <button type="button" class="nav__close" id="navClose" aria-label="Close menu">&times;</button>
           <ul class="nav__list">
-          <li><a href="index.html#portfolio" class="nav__link">Портфолио</a></li>
-          <li><a href="index.html#about" class="nav__link">О студии</a></li>
+          <li><a href="index.html#portfolio" class="nav__link">Portfolio</a></li>
+          <li><a href="index.html#about" class="nav__link">About</a></li>
           <li class="nav__item nav__item--dropdown">
-            <a href="services.html" class="nav__link">Услуги</a>
-            <ul class="nav__submenu" aria-label="Направления We11">
-              <li><a href="okleyka.html" class="nav__sublink">Оклейка PPF</a></li>
-              <li><a href="polirovka.html" class="nav__sublink">Детейлинг-полировка</a></li>
-              <li><a href="keramika.html" class="nav__sublink">Керамические покрытия</a></li>
-              <li><a href="himchistka.html" class="nav__sublink">Химчистка салона</a></li>
+            <a href="services.html" class="nav__link">Services</a>
+            <ul class="nav__submenu" aria-label="Apex Detail services">
+              <li><a href="okleyka.html" class="nav__sublink">PPF Wrap</a></li>
+              <li><a href="polirovka.html" class="nav__sublink">Detailing Polish</a></li>
+              <li><a href="keramika.html" class="nav__sublink">Ceramic Coatings</a></li>
+              <li><a href="himchistka.html" class="nav__sublink">Interior Detailing</a></li>
             </ul>
           </li>
-          <li><a href="contacts.html" class="nav__link nav__link--active">Контакты</a></li>
+          <li><a href="contacts.html" class="nav__link nav__link--active">Contacts</a></li>
         </ul>
         </div>
       </nav>
       <div class="header__actions">
-        <a href="tel:+74951234567" class="header__phone">+7 (495) 123-45-67</a>
-        <button type="button" class="btn btn--primary header__cta" id="openModalHeader" aria-label="Записаться">Записаться</button>
+        <a href="tel:+13105550147" class="header__phone">+1 (310) 555-0147</a>
+        <button type="button" class="btn btn--primary header__cta" id="openModalHeader" aria-label="Book now">Book now</button>
       </div>
     </div>
   </header>
 
   <!--
-    Структура страницы контактов:
-    1. page-hero — хлебные крошки, заголовок, короткий лид
-    2. contacts-section — сетка из двух location-card (Москва | Дубай)
-       • location-card__body — метка города, адрес, телефон, email, часы
-       • location-card__map-wrap — полноцветная интерактивная карта (Google Maps iframe)
-    3. Общий footer + модальное окно записи (как на остальных страницах)
+    Contacts page structure:
+    1. page-hero — breadcrumbs, title, short lead
+    2. contacts-section — grid of two location-card blocks (Los Angeles | Miami)
+       • location-card__body — city label, address, phone, email, hours
+       • location-card__map-wrap — full-color interactive map (Google Maps iframe)
+    3. Shared footer + booking modal (as on the other pages)
   -->
 
   <main>
     <header class="page-hero">
       <div class="container">
-        <p class="page-hero__crumb reveal"><a href="index.html">Главная</a> / Контакты</p>
-        <h1 class="page-hero__title reveal">Контакты</h1>
+        <p class="page-hero__crumb reveal"><a href="index.html">Home</a> / Contacts</p>
+        <h1 class="page-hero__title reveal">Contacts</h1>
         <p class="page-hero__lead reveal">
-          Два флагманских пространства We11 — в Москве и в Дубае. Единый стандарт сервиса, персональные менеджеры и приватная зона приёмки для клиентов, ценящих время и конфиденциальность.
+          Two flagship Apex Detail studios — in Los Angeles and Miami. One service standard, dedicated managers, and private intake areas for clients who value time, precision, and discretion.
         </p>
       </div>
     </header>
 
-    <section class="contacts-section" aria-label="Адреса филиалов">
+    <section class="contacts-section" aria-label="Studio locations">
       <div class="container contacts-grid">
         <article class="location-card reveal">
           <div class="location-card__body">
-            <p class="location-card__label">Филиал</p>
-            <h2 class="location-card__title">Москва</h2>
+            <p class="location-card__label">Studio</p>
+            <h2 class="location-card__title">Los Angeles</h2>
             <p class="location-card__address">
-              125047, Москва, ул. Примерная, 1<br />
-              Студия We11 · въезд с обратной стороны здания (шлагбаум по звонку)
+              90024, Los Angeles, 100 Example Blvd, Suite 1 — Apex Detail studio · entrance at rear (call for gate)
             </p>
             <div class="location-card__meta">
-              <a href="tel:+74951234567">+7 (495) 123-45-67</a>
-              <a href="mailto:msk@we11.detail">msk@we11.detail</a>
+              <a href="tel:+13105550147">+1 (310) 555-0147</a>
+              <a href="mailto:ApexDetail@apexdetail.com">ApexDetail@apexdetail.com</a>
             </div>
             <p class="location-card__hours">
-              Пн–Сб: 10:00 — 21:00<br />
-              Вс: по записи
+              Mon–Sat: 10:00 AM — 9:00 PM / Sun: by appointment
             </p>
           </div>
           <div class="location-card__map-wrap">
             <iframe
               class="location-card__map"
-              title="Google Maps — центр Москвы, ориентир для студии We11 (замените на точный embed из кабинета Google Мои карты)"
-              src="https://www.google.com/maps?q=55.7522,37.6156&amp;z=15&amp;hl=ru&amp;output=embed"
+              title="Google Maps — Los Angeles location for Apex Detail studio"
+              src="https://www.google.com/maps?q=34.0522,-118.2437&amp;z=15&amp;hl=en&amp;output=embed"
               loading="lazy"
               allowfullscreen=""
               referrerpolicy="no-referrer-when-downgrade"
@@ -101,26 +99,24 @@
 
         <article class="location-card reveal">
           <div class="location-card__body">
-            <p class="location-card__label">Филиал</p>
-            <h2 class="location-card__title">Дубай</h2>
+            <p class="location-card__label">Studio</p>
+            <h2 class="location-card__title">Miami</h2>
             <p class="location-card__address">
-              Dubai Design District (d3)<br />
-              We11 Garage — боксы с климат-контролем и зоной ожидания
+              Miami Design District — Apex Detail Garage — climate-controlled bays and lounge
             </p>
             <div class="location-card__meta">
-              <a href="tel:+97141234567">+971 4 123 4567</a>
-              <a href="mailto:dubai@we11.detail">dubai@we11.detail</a>
+              <a href="tel:+13055550182">+1 (305) 555-0182</a>
+              <a href="mailto:Miami@apexdetail.com">Miami@apexdetail.com</a>
             </div>
             <p class="location-card__hours">
-              Пн–Сб: 9:00 — 20:00 (GST)<br />
-              Воскресенье: по согласованию
+              Mon–Sat: 9:00 AM — 8:00 PM (EST) / Sunday: by arrangement
             </p>
           </div>
           <div class="location-card__map-wrap">
             <iframe
               class="location-card__map"
-              title="Google Maps — Dubai Design District, ориентир для We11 Garage"
-              src="https://www.google.com/maps?q=25.1972,55.2780&amp;z=14&amp;hl=en&amp;output=embed"
+              title="Google Maps — Miami Design District location for Apex Detail Garage"
+              src="https://www.google.com/maps?q=25.8010,-80.1918&amp;z=14&amp;hl=en&amp;output=embed"
               loading="lazy"
               allowfullscreen=""
               referrerpolicy="no-referrer-when-downgrade"
@@ -134,35 +130,35 @@
   <footer class="footer">
     <div class="container footer__grid">
       <div class="footer__brand reveal">
-        <a href="index.html"><span class="logo__mark logo__mark--footer">We11</span></a>
-        <p>Премиальный детейлинг. Москва · Дубай</p>
+        <a href="index.html"><span class="logo__mark logo__mark--footer">Apex Detail</span></a>
+        <p>Premium detailing. Los Angeles · Miami</p>
       </div>
       <div class="footer__col reveal">
-        <h3 class="footer__title">Москва</h3>
-        <p>ул. Примерная, 1, студия We11</p>
-        <a href="tel:+74951234567" class="footer__link">+7 (495) 123-45-67</a>
-        <a href="mailto:msk@we11.detail" class="footer__link">msk@we11.detail</a>
+        <h3 class="footer__title">Los Angeles</h3>
+        <p>90024, Los Angeles, 100 Example Blvd, Suite 1 — Apex Detail studio · entrance at rear (call for gate)</p>
+        <a href="tel:+13105550147" class="footer__link">+1 (310) 555-0147</a>
+        <a href="mailto:ApexDetail@apexdetail.com" class="footer__link">ApexDetail@apexdetail.com</a>
       </div>
       <div class="footer__col reveal">
-        <h3 class="footer__title">Дубай</h3>
-        <p>Dubai Design District, We11 Garage</p>
-        <a href="tel:+97141234567" class="footer__link">+971 4 123 4567</a>
-        <a href="mailto:dubai@we11.detail" class="footer__link">dubai@we11.detail</a>
+        <h3 class="footer__title">Miami</h3>
+        <p>Miami Design District — Apex Detail Garage — climate-controlled bays and lounge</p>
+        <a href="tel:+13055550182" class="footer__link">+1 (305) 555-0182</a>
+        <a href="mailto:Miami@apexdetail.com" class="footer__link">Miami@apexdetail.com</a>
       </div>
       <div class="footer__social reveal">
-        <h3 class="footer__title">Соцсети</h3>
+        <h3 class="footer__title">Social</h3>
         <div class="footer__social-links">
-          <a href="https://t.me/" class="footer__link" target="_blank" rel="noopener noreferrer">Telegram</a>
           <a href="https://instagram.com/" class="footer__link" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a href="https://vk.com/" class="footer__link" target="_blank" rel="noopener noreferrer">VK</a>
+          <a href="https://facebook.com/" class="footer__link" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="https://youtube.com/" class="footer__link" target="_blank" rel="noopener noreferrer">YouTube</a>
         </div>
-        <p style="margin-top: 1rem;"><a href="contacts.html" class="footer__link">Схема проезда</a></p>
+        <p style="margin-top: 1rem;"><a href="contacts.html" class="footer__link">Directions</a></p>
       </div>
     </div>
     <div class="footer__bottom container">
       <p class="footer__legal">
-        <span>© We11, 2026. Все права защищены.</span>
-        <a href="privacy.html" class="footer__legal-link">Политика конфиденциальности</a>
+        <span>© Apex Detail, 2026. All rights reserved.</span>
+        <a href="privacy.html" class="footer__legal-link">Privacy Policy</a>
       </p>
     </div>
   </footer>
@@ -170,39 +166,39 @@
   <div class="modal" id="modalBook" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
     <div class="modal__backdrop" id="modalBackdrop" tabindex="-1"></div>
     <div class="modal__box">
-      <button type="button" class="modal__close" id="modalClose" aria-label="Закрыть окно">&times;</button>
-      <h2 class="modal__title" id="modalTitle">Запись в We11</h2>
+      <button type="button" class="modal__close" id="modalClose" aria-label="Close window">&times;</button>
+      <h2 class="modal__title" id="modalTitle">Book Apex Detail</h2>
       <p class="modal__text">
-        Оставьте контакты — менеджер свяжется с вами в течение часа, уточнит модель и пожелания.
+        Leave your contact details — a manager will get back to you within an hour to confirm your vehicle model and service preferences.
       </p>
       <form class="modal__form" id="modalForm">
         <div class="modal__form-fields" id="modalFormFields">
           <label class="modal__label">
-            <span>Имя</span>
-            <input type="text" name="name" required autocomplete="name" class="modal__input" placeholder="Как к вам обращаться" />
+            <span>Name</span>
+            <input type="text" name="name" required autocomplete="name" class="modal__input" placeholder="How should we address you?" />
           </label>
           <label class="modal__label">
-            <span>Телефон</span>
-            <input type="tel" name="phone" required autocomplete="tel" class="modal__input modal__input--phone" id="modalPhone" inputmode="tel" maxlength="18" placeholder="+7 (__) ___-__-__" />
+            <span>Phone</span>
+            <input type="tel" name="phone" required autocomplete="tel" class="modal__input modal__input--phone" id="modalPhone" inputmode="tel" maxlength="18" placeholder="+1 (___) ___-____" />
           </label>
           <label class="modal__label">
-            <span>Комментарий</span>
-            <textarea name="comment" class="modal__input modal__textarea" rows="4" placeholder="Марка авто, модель, интересующая услуга"></textarea>
+            <span>Comment</span>
+            <textarea name="comment" class="modal__input modal__textarea" rows="4" placeholder="Vehicle make, model, and service of interest"></textarea>
           </label>
-          <button type="submit" class="modal__submit">ОТПРАВИТЬ ЗАЯВКУ</button>
+          <button type="submit" class="modal__submit">SEND REQUEST</button>
         </div>
-        <p class="modal__hint" id="modalHint" hidden>Спасибо, мы скоро свяжемся с вами!</p>
+        <p class="modal__hint" id="modalHint" hidden>Thank you, we will contact you shortly.</p>
       </form>
     </div>
   </div>
 
-  <div class="cookie-consent" id="cookieConsent" role="dialog" aria-label="Уведомление об использовании cookie" aria-live="polite" hidden>
+  <div class="cookie-consent" id="cookieConsent" role="dialog" aria-label="Cookie notice" aria-live="polite" hidden>
     <div class="cookie-consent__inner container">
       <p class="cookie-consent__text">
-        Мы используем файлы cookie, чтобы сделать ваш опыт работы с сайтом лучше. Продолжая просмотр, вы соглашаетесь с нашей
-        <a href="privacy.html">Политикой конфиденциальности</a>.
+        We use cookies to improve your website experience. By continuing to browse, you agree to our
+        <a href="privacy.html">Privacy Policy</a>.
       </p>
-      <button type="button" class="cookie-consent__btn" id="cookieConsentAccept">Принять</button>
+      <button type="button" class="cookie-consent__btn" id="cookieConsentAccept">Accept</button>
     </div>
   </div>
 

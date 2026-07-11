@@ -1,4 +1,4 @@
-/* We11 — общие стили: сброс, переменные, шрифты, header, footer, кнопки, модалка */
+/* Apex Detail — общие стили: сброс, переменные, шрифты, header, footer, кнопки, модалка */
 
 :root {
   --bg-deep: #0a0a0a;
@@ -271,7 +271,7 @@ ul {
   transform-origin: center;
 }
 
-/* Кнопки (в т.ч. стеклянный эффект) — типографика как на gh-pages We11 */
+/* Кнопки (в т.ч. стеклянный эффект) — типографика как на gh-pages Apex Detail */
 .btn {
   -webkit-appearance: none;
   appearance: none;

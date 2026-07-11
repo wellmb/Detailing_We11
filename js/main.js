@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
   "use strict";
 
   var header = document.getElementById("header");
@@ -139,37 +139,35 @@
   function digitsFromPhone(val) {
     var d = String(val).replace(/\D/g, "");
     if (!d.length) return "";
-    if (d[0] === "8") d = "7" + d.slice(1);
-    if (d[0] === "7") d = d.slice(1);
+    if (d[0] === "1") d = d.slice(1);
     return d.slice(0, 10);
   }
 
-  function formatRuPhone(tail) {
+  function formatUsPhone(tail) {
     tail = String(tail).slice(0, 10);
     if (!tail.length) return "";
-    var out = "+7 (";
+    var out = "+1 (";
     out += tail.slice(0, 3);
     if (tail.length >= 3) out += ")";
     if (tail.length > 3) out += " " + tail.slice(3, 6);
-    if (tail.length > 6) out += "-" + tail.slice(6, 8);
-    if (tail.length > 8) out += "-" + tail.slice(8, 10);
+    if (tail.length > 6) out += "-" + tail.slice(6, 10);
     return out;
   }
 
   function applyPhoneMask() {
     if (!modalPhone) return;
-    modalPhone.value = formatRuPhone(digitsFromPhone(modalPhone.value));
+    modalPhone.value = formatUsPhone(digitsFromPhone(modalPhone.value));
   }
 
   function initModalPhone() {
     if (!modalPhone) return;
     modalPhone.addEventListener("input", applyPhoneMask);
     modalPhone.addEventListener("focus", function () {
-      if (!modalPhone.value.trim()) modalPhone.value = "+7 (";
+      if (!modalPhone.value.trim()) modalPhone.value = "+1 (";
     });
     modalPhone.addEventListener("blur", function () {
       var v = modalPhone.value.trim();
-      if (v === "+7 (" || v === "+7") modalPhone.value = "";
+      if (v === "+1 (" || v === "+1") modalPhone.value = "";
     });
   }
 
@@ -371,7 +369,7 @@
 
   var cookieBanner = document.getElementById("cookieConsent");
   var cookieAccept = document.getElementById("cookieConsentAccept");
-  var COOKIE_CONSENT_KEY = "we11_cookie_consent";
+  var COOKIE_CONSENT_KEY = "apex_cookie_consent";
   if (cookieBanner && localStorage.getItem(COOKIE_CONSENT_KEY) !== "1") {
     cookieBanner.hidden = false;
   }
