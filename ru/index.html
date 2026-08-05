@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Apex Detail — премиальный детейлинг в Лос-Анджелесе и Майами. PPF, коррекция ЛКП, керамика, химчистка салона и комплексный уход за автомобилем." />
+  <title>Apex Detail — Премиальный детейлинг</title>
+  <link rel="icon" type="image/png" sizes="512x512" href="/images/we11-car-icon-white-on-black-512.png" />
+  <link rel="apple-touch-icon" href="/images/we11-car-icon-white-on-black-512.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="header__inner container">
+      <a href="/ru/" class="logo">
+        <span class="logo__mark">Apex Detail</span>
+      </a>
+      <nav class="nav" aria-label="Главное меню">
+        <button type="button" class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Открыть меню">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav__drawer" id="navMenu" role="dialog" aria-modal="true" aria-label="Меню сайта" aria-hidden="true">
+          <button type="button" class="nav__close" id="navClose" aria-label="Закрыть меню">&times;</button>
+          <ul class="nav__list">
+          <li><a href="#portfolio" class="nav__link">Портфолио</a></li>
+          <li><a href="#about" class="nav__link">О нас</a></li>
+          <li class="nav__item nav__item--dropdown">
+            <a href="/ru/services.html" class="nav__link">Услуги</a>
+            <ul class="nav__submenu" aria-label="Услуги Apex Detail">
+              <li><a href="/ru/okleyka.html" class="nav__sublink">Оклейка PPF</a></li>
+              <li><a href="/ru/polirovka.html" class="nav__sublink">Детейлинг-полировка</a></li>
+              <li><a href="/ru/keramika.html" class="nav__sublink">Керамические покрытия</a></li>
+              <li><a href="/ru/himchistka.html" class="nav__sublink">Химчистка салона</a></li>
+            </ul>
+          </li>
+          <li><a href="/ru/contacts.html" class="nav__link">Контакты</a></li>
+        </ul>
+        </div>
+      </nav>
+      <div class="header__actions">
+        <a href="tel:+13105550147" class="header__phone">+1 (310) 555-0147</a>
+        <button type="button" class="btn btn--primary header__cta" id="openModalHeader" aria-label="Записаться">Записаться</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Главный экран">
+      <div class="hero__content container">
+        <p class="hero__label reveal">Детейлинг-студия мирового уровня</p>
+        <h1 class="hero__title reveal">APEX DETAIL — ПРЕМИАЛЬНЫЙ ДЕТЕЙЛИНГ</h1>
+        <p class="hero__subtitle reveal">
+          Премиальный уход за ЛКП, салоном и защитой: полировка, PPF, керамика и химчистка. Дисциплина процесса и бескомпромиссные материалы.
+        </p>
+        <div class="hero__buttons reveal">
+          <a href="#services" class="btn btn--hero-solid btn--lg">Наши услуги</a>
+          <button type="button" class="btn btn--hero-ghost btn--lg" id="openModalHero">Быстрая запись</button>
+        </div>
+      </div>
+      <div class="hero__scroll" aria-hidden="true">
+        <span class="hero__scroll-line"></span>
+      </div>
+    </section>
+
+    <section class="features section" id="features">
+      <div class="container">
+        <div class="features__grid">
+          <article class="feature-card reveal">
+            <span class="feature-card__value">10+</span>
+            <span class="feature-card__unit">лет опыта</span>
+            <p class="feature-card__text">Команда специалистов с международной практикой и регулярным обучением.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-card__value">11&nbsp;000+</span>
+            <span class="feature-card__unit">автомобилей</span>
+            <p class="feature-card__text">Довольные клиенты и точно выполненные проекты по всей территории США.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-card__value">2</span>
+            <span class="feature-card__unit">студии</span>
+            <p class="feature-card__text">Студии в Лос-Анджелесе и Майами с единым сервисом и стандартами контроля качества.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-card__value">5</span>
+            <span class="feature-card__unit">лет гарантии</span>
+            <p class="feature-card__text">На ключевые услуги при соблюдении рекомендаций по эксплуатации и уходу.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-preview section" id="services">
+      <div class="container">
+        <header class="section-head reveal">
+          <h2 class="section-head__title">Услуги</h2>
+          <p class="section-head__lead">
+            Полный спектр решений для сохранения безупречного состояния кузова и салона — от бережной подготовки до многослойной защиты.
+          </p>
+        </header>
+        <div class="services-preview__grid">
+          <a href="/ru/okleyka.html" class="service-card service-card-link reveal">
+            <div class="service-card__icon" aria-hidden="true">01</div>
+            <h3 class="service-card__title">Защитная плёнка PPF</h3>
+            <p class="service-card__text">
+              PPF премиум-класса: невидимая броня для ЛКП, оптики и зон повышенного риска.
+            </p>
+            <span class="service-card__tag">Paint Protection Film</span>
+            <span class="service-card__more">Подробнее →</span>
+          </a>
+          <a href="/ru/polirovka.html" class="service-card service-card-link reveal">
+            <div class="service-card__icon" aria-hidden="true">02</div>
+            <h3 class="service-card__title">Коррекция ЛКП</h3>
+            <p class="service-card__text">
+              Удаление голограмм и дефектов с контролем толщины лака и зеркальным блеском.
+            </p>
+            <span class="service-card__tag">Коррекция и глянец</span>
+            <span class="service-card__more">Подробнее →</span>
+          </a>
+          <a href="/ru/keramika.html" class="service-card service-card-link reveal">
+            <div class="service-card__icon" aria-hidden="true">03</div>
+            <h3 class="service-card__title">Керамические покрытия</h3>
+            <p class="service-card__text">
+              Гидрофобность, глубина цвета и защита ЛКП — система под ваш стиль эксплуатации.
+            </p>
+            <span class="service-card__tag">Ceramic Coating</span>
+            <span class="service-card__more">Подробнее →</span>
+          </a>
+          <a href="/ru/himchistka.html" class="service-card service-card-link reveal">
+            <div class="service-card__icon" aria-hidden="true">04</div>
+            <h3 class="service-card__title">Химчистка и детейлинг салона</h3>
+            <p class="service-card__text">
+              Кожа, Alcantara, карбон: деликатная очистка и уход без агрессивной химии.
+            </p>
+            <span class="service-card__tag">Уход за салоном</span>
+            <span class="service-card__more">Подробнее →</span>
+          </a>
+        </div>
+        <p class="services-preview__cta reveal">
+          <a href="/ru/services.html" class="btn btn--outline btn--lg">Все услуги</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="container about__grid">
+        <div class="about__content reveal">
+          <h2 class="section-head__title section-head__title--left">О студии Apex Detail</h2>
+          <p>
+            Мы создали пространство, где технологии встречаются с эстетикой: идеально чистые боксы, профессиональный свет и инструменты, которым доверяют производители суперкаров.
+          </p>
+          <p>
+            Каждый этап — от диагностики ЛКП до финальной приёмки — документируется и согласовывается с вами. Без скрытых работ: только прозрачная смета, понятные сроки и результат, который вы видите до выдачи.
+          </p>
+          <ul class="about__list">
+            <li>Сертифицированные расходники и плёнки</li>
+            <li>Климат-контроль и пылеулавливание в зонах подготовки</li>
+            <li>Персональный менеджер на весь цикл обслуживания</li>
+          </ul>
+        </div>
+        <div class="about__panel reveal" aria-hidden="true">
+          <blockquote class="about__quote">
+            «Автомобиль отражает характер владельца. Наша задача — сохранить это отражение безупречным.»
+          </blockquote>
+          <span class="about__signature">— команда Apex Detail</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio section" id="portfolio">
+      <div class="container">
+        <header class="section-head section-head--center reveal">
+          <h2 class="section-head__title">Наши работы</h2>
+          <p class="section-head__lead">
+            Более 11&nbsp;000 автомобилей прошли через наши руки. Каждый проект — ремесло.
+          </p>
+        </header>
+        <div class="portfolio-showcase reveal">
+          <div class="ba-slider" data-ba-slider>
+            <div class="ba-slider__frame">
+              <div class="ba-slider__track" data-ba-track>
+                <img
+                  class="ba-slider__img ba-slider__img--after"
+                  src="/Toyota Scion FR-S posle.jpg"
+                  alt="Toyota Scion FR-S после комплексной реставрации"
+                  width="1600"
+                  height="900"
+                  decoding="async"
+                />
+                <div class="ba-slider__clip" data-ba-clip>
+                  <img
+                    class="ba-slider__img ba-slider__img--before"
+                    src="/Toyota Scion FR-S do.png"
+                    alt="Toyota Scion FR-S до реставрации"
+                    width="1600"
+                    height="900"
+                    decoding="async"
+                  />
+                </div>
+                <span class="ba-slider__label ba-slider__label--before">ДО</span>
+                <span class="ba-slider__label ba-slider__label--after">ПОСЛЕ</span>
+                <button
+                  type="button"
+                  class="ba-slider__handle"
+                  data-ba-handle
+                  aria-label="Слайдер сравнения: перетащите влево или вправо"
+                  aria-valuemin="3"
+                  aria-valuemax="97"
+                  aria-valuenow="50"
+                ></button>
+              </div>
+            </div>
+            <div class="ba-slider__meta">
+              <h3 class="ba-slider__title">Toyota Scion FR-S</h3>
+              <p class="ba-slider__service">Полная реставрация экстерьера и защита ЛКП</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews section" id="reviews">
+      <div class="container">
+        <header class="section-head reveal">
+          <h2 class="section-head__title">Отзывы</h2>
+          <p class="section-head__lead">Слово клиентов, которые доверили нам свои автомобили.</p>
+        </header>
+        <div class="reviews__grid">
+          <blockquote class="review-card reveal">
+            <p>«PPF и керамика на моём GT через полгода выглядят как с завода. Команда объяснила каждый шаг без навязывания допов.»</p>
+            <footer>— Алекс Р., предприниматель</footer>
+          </blockquote>
+          <blockquote class="review-card reveal">
+            <p>«Полировка убрала всё, что оставила зима на серебристом ЛКП. После химчистки салон снова как новый — с нейтральным запахом.»</p>
+            <footer>— Марина К., дизайнер</footer>
+          </blockquote>
+          <blockquote class="review-card reveal">
+            <p>«Отправил машину из Майами и согласовывал всё по видео. Сроки соблюли, а студия ощущается премиальной с порога.»</p>
+            <footer>— Даниэль В., инвестор</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand reveal">
+        <a href="/ru/"><span class="logo__mark logo__mark--footer">Apex Detail</span></a>
+        <p>Премиальный детейлинг. Лос-Анджелес · Майами</p>
+      </div>
+      <div class="footer__col reveal">
+        <h3 class="footer__title">Лос-Анджелес</h3>
+        <p>100 Example Blvd, Suite 1, студия Apex Detail</p>
+        <a href="tel:+13105550147" class="footer__link">+1 (310) 555-0147</a>
+        <a href="mailto:ApexDetail@apexdetail.com" class="footer__link">ApexDetail@apexdetail.com</a>
+      </div>
+      <div class="footer__col reveal">
+        <h3 class="footer__title">Майами</h3>
+        <p>Apex Detail Garage, Design District</p>
+        <a href="tel:+13055550182" class="footer__link">+1 (305) 555-0182</a>
+        <a href="mailto:Miami@apexdetail.com" class="footer__link">Miami@apexdetail.com</a>
+      </div>
+      <div class="footer__social reveal">
+        <h3 class="footer__title">Соцсети</h3>
+        <div class="footer__social-links">
+          <a href="https://instagram.com/" class="footer__link" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://facebook.com/" class="footer__link" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="https://youtube.com/" class="footer__link" target="_blank" rel="noopener noreferrer">YouTube</a>
+        </div>
+        <p style="margin-top: 1rem;"><a href="/ru/contacts.html" class="footer__link">Как добраться</a></p>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <p class="footer__legal">
+        <span>© Apex Detail, 2026. Все права защищены.</span>
+        <a href="/ru/privacy.html" class="footer__legal-link">Политика конфиденциальности</a>
+      </p>
+    </div>
+  </footer>
+
+  <div class="modal" id="modalBook" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal__backdrop" id="modalBackdrop" tabindex="-1"></div>
+    <div class="modal__box">
+      <button type="button" class="modal__close" id="modalClose" aria-label="Закрыть окно">&times;</button>
+      <h2 class="modal__title" id="modalTitle">Запись в Apex Detail</h2>
+      <p class="modal__text">
+        Оставьте контакты — менеджер перезвонит в течение часа, чтобы уточнить модель автомобиля и ваши пожелания.
+      </p>
+      <form class="modal__form" id="modalForm">
+        <div class="modal__form-fields" id="modalFormFields">
+          <label class="modal__label">
+            <span>Имя</span>
+            <input type="text" name="name" required autocomplete="name" class="modal__input" placeholder="Как к вам обращаться?" />
+          </label>
+          <label class="modal__label">
+            <span>Телефон</span>
+            <input type="tel" name="phone" required autocomplete="tel" class="modal__input modal__input--phone" id="modalPhone" inputmode="tel" maxlength="18" placeholder="+1 (___) ___-____" />
+          </label>
+          <label class="modal__label">
+            <span>Комментарий</span>
+            <textarea name="comment" class="modal__input modal__textarea" rows="4" placeholder="Марка, модель и интересующая услуга"></textarea>
+          </label>
+          <button type="submit" class="modal__submit">ОТПРАВИТЬ ЗАЯВКУ</button>
+        </div>
+        <p class="modal__hint" id="modalHint" hidden>Спасибо, мы скоро свяжемся с вами!</p>
+      </form>
+    </div>
+  </div>
+
+  <div class="cookie-consent" id="cookieConsent" role="dialog" aria-label="Уведомление об использовании cookie" aria-live="polite" hidden>
+    <div class="cookie-consent__inner container">
+      <p class="cookie-consent__text">
+        Мы используем cookie, чтобы улучшить работу сайта. Продолжая просмотр, вы соглашаетесь с
+        <a href="/ru/privacy.html">Политикой конфиденциальности</a>.
+      </p>
+      <button type="button" class="cookie-consent__btn" id="cookieConsentAccept">Принять</button>
+    </div>
+  </div>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
